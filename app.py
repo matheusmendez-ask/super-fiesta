@@ -271,7 +271,7 @@ def handle_callback():
         
         # Workaround para pegar a URL completa
         current_url = st.experimental_get_query_params()
-        full_url = f"http://localhost:8501?{urllib.parse.urlencode(current_url, doseq=True)}"
+        full_url = f"https://simuladorbcmed.streamlit.app/?{urllib.parse.urlencode(current_url, doseq=True)}"
         
         flow = get_flow()
         flow.fetch_token(authorization_response=full_url)
