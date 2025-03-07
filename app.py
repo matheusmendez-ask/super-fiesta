@@ -304,7 +304,7 @@ def handle_callback():
 
 # Verificação de Login
 if not st.session_state.get('logged_in'):
-    if 'code' in st.experimental_get_query_params():
+    if 'code' in st.query_params:
         handle_callback()
     else:
         st.title("🔒 Login Necessário")
