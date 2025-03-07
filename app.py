@@ -225,7 +225,7 @@ FINANCEIRAS = [
 # Substitua estas configurações
 CLIENT_ID = st.secrets.google_auth.client_id
 CLIENT_SECRET = st.secrets.google_auth.client_secret
-REDIRECT_URI = "https://simuladorbcmed.streamlit.app/"  # Ou http://localhost:8501 para local
+REDIRECT_URI = st.secrets.google_auth.redirect_uri  # Ou http://localhost:8501 para local
 SCOPES = ["openid", "https://www.googleapis.com/auth/userinfo.email"]
 
 def get_flow():
