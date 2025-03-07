@@ -225,7 +225,7 @@ FINANCEIRAS = [
 # Configurações do Google OAuth
 CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
 CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
-REDIRECT_URI = "http://localhost:8501"  # Ou http://localhost:8501 para local
+REDIRECT_URI = "https://simuladorbcmed.streamlit.app/"  # Ou http://localhost:8501 para local
 SCOPES = ["openid", "https://www.googleapis.com/auth/userinfo.email"]
 
 def get_flow():
