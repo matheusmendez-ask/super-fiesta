@@ -222,9 +222,9 @@ FINANCEIRAS = [
     }
 ]
 
-# Configurações do Google OAuth
-CLIENT_ID = os.getenv('GOOGLE_CLIENT_ID')
-CLIENT_SECRET = os.getenv('GOOGLE_CLIENT_SECRET')
+# Substitua estas configurações
+CLIENT_ID = st.secrets["google_auth"]["client_id"]
+CLIENT_SECRET = st.secrets["google_auth"]["client_secret"]
 REDIRECT_URI = "https://simuladorbcmed.streamlit.app/"  # Ou http://localhost:8501 para local
 SCOPES = ["openid", "https://www.googleapis.com/auth/userinfo.email"]
 
