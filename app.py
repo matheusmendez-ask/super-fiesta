@@ -268,38 +268,43 @@ def login_button():
 
 def handle_callback():
     try:
-        # Verifique se 'code' e 'state' estão presentes
+        # Verificar parâmetros obrigatórios
         if 'code' not in st.query_params or 'state' not in st.query_params:
             st.error("Parâmetros de autenticação ausentes")
             return
 
-        # Construa a URL de callback dinamicamente
-        protocol = "https"
-        host = st.secrets.google_auth.redirect_uri.split("//")[-1].split("/")[0]
-        full_url = f"{protocol}://{host}/?{urllib.parse.urlencode(st.query_params, doseq=True)}"
+        # Verificar match do state
+        if 'oauth_state' not in st.session_state or st.query_params['state'][0] != st.session_state.oauth_state:
+            st.error("Erro de segurança: State inválido")
+            return
 
-        # Autenticação
+        # Construir URL de callback
+        redirect_uri = st.secrets.google_auth.redirect_uri
+        full_url = f"{redirect_uri}?{urllib.parse.urlencode(st.query_params, doseq=True)}"
+
+        # Trocar código por token
         flow = get_flow()
         flow.fetch_token(authorization_response=full_url)
-        
-        # Obtenha dados do usuário
+
+        # Obter informações do usuário
         credentials = flow.credentials
         user_info = requests.get(
             "https://www.googleapis.com/oauth2/v3/userinfo",
             headers={"Authorization": f"Bearer {credentials.token}"}
         ).json()
-        
-        # Atualize a sessão
+
+        # Atualizar sessão
         st.session_state.update({
             'logged_in': True,
             'user_email': user_info["email"],
             'user_name': user_info.get("name", "Usuário")
         })
         
-        st.query_params.clear()  # Limpe a URL
-        
+        # Limpar parâmetros da URL
+        st.query_params.clear()
+
     except Exception as e:
-        st.error(f"Erro de autenticação: {str(e)}")
+        st.error(f"Erro crítico: {str(e)}")
         st.stop()
 
 # Verificação de Login
