@@ -2,6 +2,7 @@ import urllib.parse
 import os
 # os.environ['OAUTHLIB_RELAX_TOKEN_SCOPE'] = '1'
 
+import secrets
 import streamlit as st
 from decimal import Decimal
 from google_auth_oauthlib.flow import Flow
@@ -247,12 +248,19 @@ def login_button():
     authorization_url, state = flow.authorization_url(
         prompt="consent",
         access_type="offline",
-        state=secrets.token_urlsafe(16)  # Gere um state único
+        state=secrets.token_urlsafe(16)  # Corrigido
     )
     st.session_state.oauth_state = state
     st.markdown(f"""
     <a href="{authorization_url}" target="_self">
-        <button style="background: #4285F4; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
+        <button style="
+            background: #4285F4;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;">
             🔑 Login com Google
         </button>
     </a>
