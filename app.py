@@ -246,19 +246,13 @@ def login_button():
     flow = get_flow()
     authorization_url, state = flow.authorization_url(
         prompt="consent",
-        access_type="offline"
+        access_type="offline",
+        state=secrets.token_urlsafe(16)  # Gere um state único
     )
     st.session_state.oauth_state = state
     st.markdown(f"""
     <a href="{authorization_url}" target="_self">
-        <button style="
-            background: #4285F4;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 16px;">
+        <button style="background: #4285F4; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;">
             🔑 Login com Google
         </button>
     </a>
@@ -266,31 +260,38 @@ def login_button():
 
 def handle_callback():
     try:
-        # Obter parâmetros da URL completa
-        query_params = st.experimental_get_query_params()
-        
-        # Workaround para pegar a URL completa
-        current_url = st.experimental_get_query_params()
-        full_url = f"https://simuladorbcmed.streamlit.app/?{urllib.parse.urlencode(current_url, doseq=True)}"
-        
+        # Verifique se 'code' e 'state' estão presentes
+        if 'code' not in st.query_params or 'state' not in st.query_params:
+            st.error("Parâmetros de autenticação ausentes")
+            return
+
+        # Construa a URL de callback dinamicamente
+        protocol = "https"
+        host = st.secrets.google_auth.redirect_uri.split("//")[-1].split("/")[0]
+        full_url = f"{protocol}://{host}/?{urllib.parse.urlencode(st.query_params, doseq=True)}"
+
+        # Autenticação
         flow = get_flow()
         flow.fetch_token(authorization_response=full_url)
         
-        # Obter informações do usuário
+        # Obtenha dados do usuário
         credentials = flow.credentials
         user_info = requests.get(
             "https://www.googleapis.com/oauth2/v3/userinfo",
             headers={"Authorization": f"Bearer {credentials.token}"}
         ).json()
         
-        st.session_state.logged_in = True
-        st.session_state.user_email = user_info["email"]
-        st.session_state.user_name = user_info.get("name", "Usuário")
+        # Atualize a sessão
+        st.session_state.update({
+            'logged_in': True,
+            'user_email': user_info["email"],
+            'user_name': user_info.get("name", "Usuário")
+        })
         
-        st.experimental_set_query_params()  # Limpar a URL
+        st.query_params.clear()  # Limpe a URL
         
     except Exception as e:
-        st.error(f"Erro crítico: {str(e)}")
+        st.error(f"Erro de autenticação: {str(e)}")
         st.stop()
 
 # Verificação de Login
