@@ -344,7 +344,7 @@ def mostrar_login():
                     st.session_state.logged_in = True
                     st.session_state.username = username
                     st.success("Login realizado com sucesso!")
-                    st.experimental_rerun()
+                    st.rerun()  # Versão correta em vez de st.experimental_rerun()
                 else:
                     st.error("Usuário ou senha incorretos!")
 
@@ -404,7 +404,7 @@ def mostrar_aplicativo():
     if st.button("Sair"):
         st.session_state.logged_in = False
         st.session_state.username = ""
-        st.experimental_rerun()
+        st.rerun()  # Versão correta em vez de st.experimental_rerun()
 
     st.title("💰 Simulador de Financiamento")
     st.markdown("---")
@@ -619,6 +619,8 @@ def mostrar_aplicativo():
                         <div style='display: flex; justify-content: space-between; margin: 0.5rem 0;'>
                             <span>💰 Total:</span>
                             <strong style='color: var(--primary-color);'>{resultado['Total']}</strong>
+                        </div>
+                    </div>
                 </div>
                 """, unsafe_allow_html=True)
     else:
