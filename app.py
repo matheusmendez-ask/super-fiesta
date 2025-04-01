@@ -304,7 +304,7 @@ USUARIOS = {
     "Bruna": "n3FH8@YU62",
     "Gabriel": "46V8A{)w/;",
     "Julio": "lR331&8/Lk",
-    "Ahmed": "A!9b7DbVj5",
+    "Carol": "A!9b7DbVj5",
     "Simone": "n3FH8@YU62",
     "Pedro": "45V8A{)w/;",
 }
