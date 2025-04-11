@@ -307,7 +307,7 @@ USUARIOS = {
     "Simone": "n3FH8@YU62",
     "Pedro": "45V8A{)w/;",
     "BCMED": "boravender",
-    "Rita": "l3FH8@Yb550"
+    "Rita": "l3FH8iYb55"
 }
 
 # Inicialização do estado da sessão
