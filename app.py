@@ -280,7 +280,6 @@ USUARIOS = {
     "Douglas Ogregon" : "1G0pD(^4X?",
     "Earle" : "v9}GPI5-4z",
     "Elton" : "97E1/dp^<<",
-    "Estefano" : "@UyR59T%B9",
     "Fernando" : ")c8Rm+19,^",
     "Fernanda" : "1!9b7DbVj;",
     "Gustavo" : "E/641Q<lN+",
@@ -304,9 +303,7 @@ USUARIOS = {
     "Bruna": "n3FH8@YU62",
     "Gabriel": "46V8A{)w/;",
     "Carol": "A!9b7DbVj5",
-    "Simone": "n3FH8@YU62",
     "Pedro": "45V8A{)w/;",
-    "BCMED": "boravender",
     "Rita": "l3FH8iYb55"
 }
 
