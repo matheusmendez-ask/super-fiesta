@@ -284,7 +284,6 @@ USUARIOS = {
     "Fernanda" : "1!9b7DbVj;",
     "Gustavo" : "E/641Q<lN+",
     "João" : "n3FH8@YU62",
-    "Lanulfo" : "45V8A{)w/;",
     "Levi" : "lR331&8/Lk",
     "Lidy" : "7#24Xhh$+J",
     "Luana" : "w95y8:HCtg",
