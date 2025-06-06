@@ -304,7 +304,8 @@ USUARIOS = {
     "Rita": "l3FH8iYb55",
     "Rodrigo": "Acdf55#Lp1",
     "Claudionor": "Bcjhf#551",
-    "Lai": "Bcjjs2/1"
+    "Lai": "Bcjjs2/1",
+    "Caique": "Mcd#$15ax!"
 }
 
 # Inicialização do estado da sessão
