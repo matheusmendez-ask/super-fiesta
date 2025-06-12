@@ -286,7 +286,7 @@ USUARIOS = {
     "João" : "n3FH8@YU62",
     "Levi" : "lR331&8/Lk",
     "Lidy" : "7#24Xhh$+J",
-    "Lucas" : "t13Y40@Q<T",
+    "Anderson" : "t13Y40@Q<T",
     "Mateus" : "3'552Etelc",
     "Matheus Mendez" : "senhAdm",
     "Naiane" : "osWaS528£[",
@@ -305,7 +305,10 @@ USUARIOS = {
     "Rodrigo": "Acdf55#Lp1",
     "Claudionor": "Bcjhf#551",
     "Lai": "Bcjjs2/1",
-    "Caique": "Mcd#$15ax!"
+    "Caique": "Mcd#$15ax!",
+    "Wagner": "Hjfh#5879",
+    "Amanda": "LpMj587#$",
+    "Geisiane": "Çpoe#5510@"
 }
 
 # Inicialização do estado da sessão
