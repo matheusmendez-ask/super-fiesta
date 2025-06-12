@@ -307,8 +307,8 @@ USUARIOS = {
     "Lai": "Bcjjs2/1",
     "Caique": "Mcd#$15ax!",
     "Wagner": "Hjfh#5879",
-    "Amanda": "LpMj587#$",
-    "Geisiane": "Çpoe#5510@"
+    "Amanda": "LpMj587#5",
+    "Geisiane": "apoe#5510#"
 }
 
 # Inicialização do estado da sessão
