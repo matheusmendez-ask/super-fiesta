@@ -308,7 +308,8 @@ USUARIOS = {
     "Caique": "Mcd#$15ax",
     "Wagner": "Hjfh#587",
     "Amanda": "LpMj587#",
-    "Geisiane": "apoe#5510"
+    "Geisiane": "apoe#5510",
+    "BCMED": "senhaBcmed"
 }
 
 # Inicialização do estado da sessão
