@@ -269,10 +269,7 @@ FINANCEIRAS = [
 
 # Dados de usuários
 USUARIOS = {
-    "Cris": "hX730}8S[L",
     "Eduardo": "3(wy81Y9r3",
-    "Well": "m0kIr6T)L8",
-    "Alvaro": "7lE6#xs3lZ",
     "Dennys" : "t[}3l9#O6$",
     "Raissa": "GC5|2A9p9e",
     "Bruce" : "sHlnU{90]9",
