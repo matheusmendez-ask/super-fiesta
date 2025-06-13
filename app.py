@@ -305,10 +305,10 @@ USUARIOS = {
     "Rodrigo": "Acdf55#Lp1",
     "Claudionor": "Bcjhf#551",
     "Lai": "Bcjjs2/1",
-    "Caique": "Mcd#$15ax!",
-    "Wagner": "Hjfh#5879",
-    "Amanda": "LpMj587#5",
-    "Geisiane": "apoe#5510#"
+    "Caique": "Mcd#$15ax",
+    "Wagner": "Hjfh#587",
+    "Amanda": "LpMj587#",
+    "Geisiane": "apoe#5510"
 }
 
 # Inicialização do estado da sessão
