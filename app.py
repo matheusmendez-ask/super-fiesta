@@ -287,7 +287,6 @@ USUARIOS = {
     "Mateus" : "3'552Etelc",
     "Matheus Mendez" : "senhAdm",
     "Naiane" : "osWaS528£[",
-    "Omar" : "7H0gLz&2:W",
     "Paulo" : "7E0/Q8a2RE",
     "Renan" : "O8k17h£8J7",
     "Robson" : "0t2Z1_R_k3",
