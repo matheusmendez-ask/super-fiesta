@@ -285,7 +285,7 @@ USUARIOS = {
     "Lidy" : "7#24Xhh$+J",
     "Miler" : "t13Y40@Q<T",
     "Mateus" : "3'552Etelc",
-    "Matheus Mendez" : "senhAdm",
+    "Matheus" : "Adse@5513",
     "Naiane" : "osWaS528£[",
     "Paulo" : "7E0/Q8a2RE",
     "Tanianara" : "O8k17h£8J7",
@@ -637,3 +637,4 @@ if not st.session_state.logged_in:
     mostrar_login()
 else:
     mostrar_aplicativo()
+
