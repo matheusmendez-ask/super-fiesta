@@ -273,7 +273,7 @@ USUARIOS = {
     "Dennys" : "t[}3l9#O6$",
     "Raissa": "GC5|2A9p9e",
     "Bruce" : "sHlnU{90]9",
-    "Douglas" : "76B/d040/|",
+    "Leylane" : "76B/d040/",
     "Douglas Ogregon" : "1G0pD(^4X?",
     "Earle" : "v9}GPI5-4z",
     "Elton" : "97E1/dp^<<",
@@ -284,7 +284,7 @@ USUARIOS = {
     "Levi" : "lR331&8/Lk",
     "Lidy" : "7#24Xhh$+J",
     "Miler" : "t13Y40@Q<T",
-    "Mateus" : "3'552Etelc",
+    "Abner" : "3552Etelc",
     "Matheus" : "Adse@5513",
     "Naiane" : "osWaS528£[",
     "Paulo" : "7E0/Q8a2RE",
@@ -637,5 +637,6 @@ if not st.session_state.logged_in:
     mostrar_login()
 else:
     mostrar_aplicativo()
+
 
 
